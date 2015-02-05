@@ -1,3 +1,5 @@
+This is a fork of Jeffrey Way's FormField.
+
 The basic idea is simple: make form creation simpler.
 
 [View a quick visual
