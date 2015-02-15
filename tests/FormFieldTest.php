@@ -2,10 +2,10 @@
 
 class FormFieldTest extends Orchestra\Testbench\TestCase {
 
-	protected function getPackageProviders()
-	{
-	    return ['Way\Form\FormServiceProvider'];
-	}
+    protected function getPackageProviders()
+    {
+        return ['Way\Form\FormServiceProvider'];
+    }
 
     public function test_prepares_form_field()
     {
@@ -21,9 +21,9 @@ class FormFieldTest extends Orchestra\Testbench\TestCase {
         $html = FormField::someField(['type' => 'textarea']);
 
         $this->assertContains(
-            '<textarea class="form-control" type="textarea" name="someField" cols="50" rows="10" id="someField">',
-            $html
-        );
+          '<textarea class="form-control" type="textarea" name="someField" cols="50" rows="10" id="someField">',
+          $html
+          );
     }
 
     public function test_can_set_custom_label_text()
@@ -46,4 +46,11 @@ class FormFieldTest extends Orchestra\Testbench\TestCase {
 
         $this->assertContains('type="email"', $html);
     }
+
+    public function test_form_field_value() {
+        $html = FormField::someField(['value' => 'allyourbasearebelongtous']);
+
+        $this->assertContains('value="allyourbasearebelongtous"', $html);
+    }
+    
 }

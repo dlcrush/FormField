@@ -85,9 +85,15 @@ class FormField {
      */
     protected function createInput($type, $args, $name)
     {
-        return $type == 'password'
-            ? Form::password($name, $args)
-            : Form::$type($name, null, $args);
+        if ($type == 'password') {
+            return Form::password($name, $args);
+        }
+
+       return Form::$type($name, isset($args['value']) ? $args['value'] : null, $args);
+
+        // return $type == 'password'
+        // ? Form::password($name, $args)
+        // : Form::$type($name, null, $args);
     }
 
     /**
