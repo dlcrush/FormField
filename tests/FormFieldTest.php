@@ -52,5 +52,10 @@ class FormFieldTest extends Orchestra\Testbench\TestCase {
 
         $this->assertContains('value="allyourbasearebelongtous"', $html);
     }
-    
+
+    public function test_form_field_select() {
+        $html = FormField::someField(['type' => 'select', 'options' => ['blah' => 'Awesomesauce']]);
+
+        $this->assertContains('<option value="blah">Awesomesauce</option>', $html);
+    }
 }

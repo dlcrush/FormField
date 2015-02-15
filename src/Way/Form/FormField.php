@@ -85,11 +85,20 @@ class FormField {
      */
     protected function createInput($type, $args, $name)
     {
+        $value = isset($args['value']) ? $args['value'] : null;
+        unset($args['value']);
+
         if ($type == 'password') {
             return Form::password($name, $args);
         }
 
-       return Form::$type($name, isset($args['value']) ? $args['value'] : null, $args);
+        if ($type == 'select') {
+            $options = isset($args['options']) ? $args['options'] : [];
+            unset($args['options']);
+            return Form::select($name, $options, $value, $args);
+        }
+
+       return Form::$type($name, $value, $args);
 
         // return $type == 'password'
         // ? Form::password($name, $args)
