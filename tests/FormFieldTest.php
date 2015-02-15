@@ -1,6 +1,11 @@
 <?php
 
-class FormFieldTest extends TestCase {
+class FormFieldTest extends Orchestra\Testbench\TestCase {
+
+	protected function getPackageProviders()
+	{
+	    return ['Way\Form\FormServiceProvider'];
+	}
 
     public function test_prepares_form_field()
     {
