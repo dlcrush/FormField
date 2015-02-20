@@ -1,4 +1,4 @@
-<?php namespace Way\Form;
+<?php namespace dlcrush\Form;
 
 use Form, Config;
 

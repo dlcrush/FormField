@@ -4,7 +4,7 @@ class FormFieldTest extends Orchestra\Testbench\TestCase {
 
     protected function getPackageProviders()
     {
-        return ['Way\Form\FormServiceProvider'];
+        return ['dlcrush\Form\FormServiceProvider'];
     }
 
     public function test_prepares_form_field()

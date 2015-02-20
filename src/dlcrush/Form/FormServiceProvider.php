@@ -1,4 +1,4 @@
-<?php namespace Way\Form;
+<?php namespace dlcrush\Form;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -9,8 +9,8 @@ class FormServiceProvider extends ServiceProvider {
 
     public function boot()
     {
-        $this->package('way/form');
+        $this->package('dlcrush/form');
 
-        AliasLoader::getInstance()->alias('FormField', 'Way\Form\FormField');
+        AliasLoader::getInstance()->alias('FormField', 'dlcrush\Form\FormField');
     }
 }
