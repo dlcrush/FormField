@@ -53,7 +53,7 @@ Begin by installing the package through Composer.
 
 ```js
 require: {
-    "way/form": "dev-master"
+    "dlcrush/form": "dev-master"
 }
 ```
 
@@ -62,7 +62,7 @@ Next, add the service provider to `app/config/app.php`.
 ```php
 'providers' => [
     // ..
-    'Way\Form\FormServiceProvider'
+    'dlcrush\Form\FormServiceProvider'
 ]
 ```
 
@@ -83,7 +83,7 @@ by default, you can of course customize the class names as you wish.
 If you want to override the defaults, you can publish the config, like
 so:
 
-    php artisan config:publish way/form
+    php artisan config:publish dlcrush/form
 
 Now, access `app/config/packages/way/form/config.php` to customize.
 Here's what it lists by default:
