@@ -85,7 +85,7 @@ so:
 
     php artisan config:publish dlcrush/form
 
-Now, access `app/config/packages/way/form/config.php` to customize.
+Now, access `app/config/packages/dlcrush/form/config.php` to customize.
 Here's what it lists by default:
 
 ```php
